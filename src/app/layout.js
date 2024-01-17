@@ -1,6 +1,10 @@
-import { Inter } from "next/font/google";
+import "../styles/globals.css";
+import { Epilogue } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const epilogue = Epilogue({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+});
 
 export const metadata = {
   title: "NeuroConexão",
@@ -10,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
-      <body className={inter.className}>{children}</body>
+      <body className={epilogue.className}>{children}</body>
     </html>
   );
 }
