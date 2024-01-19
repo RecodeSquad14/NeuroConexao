@@ -73,6 +73,7 @@ function Header() {
                 ) : (
                   <Image src="/close.svg" alt="menu" width={25} height={25} />
                 )}
+                
               </button>
             </div>
           </div>
@@ -99,6 +100,7 @@ function Header() {
               >
                 Login
               </Link>
+              
             </div>
           </div>
         )}
