@@ -12,7 +12,7 @@ function Header() {
 
   return (
     <>
-      <nav className="bg-white">
+      <nav className="text-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-32">
             <div className="flex items-center">
@@ -22,7 +22,7 @@ function Header() {
                   className="text-black flex items-center justify-center gap-3"
                 >
                   <Image src="/logo.png" alt="logo" width={50} height={55} />
-                  <p className="font-semibold">Neuro Conexão</p>
+                  <p className="font-semibold">NeuroConexão</p>
                 </Link>
               </div>
             </div>
