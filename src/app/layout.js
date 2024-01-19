@@ -2,6 +2,8 @@ import "../styles/globals.css";
 import Header from "@/components/header/Header";
 import { Epilogue } from "next/font/google";
 
+import Footer from "@/components/footer/Footer";
+
 const epilogue = Epilogue({
   subsets: ["latin"],
   weight: ["500", "600", "700"],
@@ -18,6 +20,7 @@ export default function RootLayout({ children }) {
       <body className={epilogue.className}>
         <Header />
         {children}
+        <Footer/>
       </body>
     </html>
   );

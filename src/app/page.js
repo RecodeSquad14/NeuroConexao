@@ -24,6 +24,8 @@ export default function Home() {
           />
         </div>
       </GridContainer>
+      
     </div>
+    
   );
 }
