@@ -18,6 +18,11 @@ module.exports = {
       maxWidth: {
         grid: "77.5rem",
       },
+      backgroundColor: {
+        primary: "#9274e3",
+        secondary: "#c481fd",
+        tertiary: "#8c8cfb",
+      },
     },
   },
   plugins: [],
