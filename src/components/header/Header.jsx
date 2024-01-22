@@ -12,7 +12,7 @@ function Header() {
 
   return (
     <>
-      <nav className="bg-white">
+      <nav className="text-slate-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-32">
             <div className="flex items-center">
@@ -22,28 +22,34 @@ function Header() {
                   className="text-black flex items-center justify-center gap-3"
                 >
                   <Image src="/logo.png" alt="logo" width={50} height={55} />
-                  <p className="font-semibold">Neuro Conexão</p>
+                  <p className="font-semibold">NeuroConexão</p>
                 </Link>
               </div>
             </div>
-            <div className="">
+            <div className=" hidden md:block ">
               <div className="ml-4 flex items-center space-x-4">
                 <Link
                   href="/"
-                  className="text-black hover:bg-blue-500  rounded-lg p-2"
+                  className="text-black hover:bg-primary hover:text-white  rounded-lg p-2"
                 >
                   Inicio
                 </Link>
                 <Link
                   href="/conexao"
-                  className="text-black hover:bg-blue-500  rounded-lg p-2"
+                  className="text-black hover:bg-primary hover:text-white  rounded-lg p-2"
                 >
                   Conexão
+                </Link>
+                <Link
+                  href="/sobre"
+                  className="text-black hover:bg-primary hover:text-white  rounded-lg p-2"
+                >
+                  Sobre Nós
                 </Link>
 
                 <Link
                   href="/login"
-                  className="text-black hover:bg-blue-500  rounded-lg p-2 flex items-center gap-1"
+                  className="text-black hover:bg-primary hover:text-white  rounded-lg p-2 flex items-center gap-1"
                 >
                   <Image
                     src="/loginIcon.svg"
@@ -55,7 +61,7 @@ function Header() {
                 </Link>
               </div>
             </div>
-            <div className="block 785:hidden items-center">
+            <div className=" block md:hidden items-center">
               <button
                 className="inline-flex items-center justify-center p-2 rounded-md text-white
                  hover:text-white focus outline-none 
@@ -78,24 +84,30 @@ function Header() {
           </div>
         </div>
         {isClick && (
-          <div className="md:hidden">
+          <div className="block">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               <Link
                 href="/"
-                className="text-black block hover:bg-black hover:text-white rounded-lg p-2"
+                className="text-black block hover:bg-primary hover:text-white rounded-lg p-2"
               >
                 Inicio
               </Link>
               <Link
-                href="/destino"
-                className="text-black block hover:bg-black  hover:text-white rounded-lg p-2"
+                href="/conexao"
+                className="text-black block hover:bg-primary  hover:text-white rounded-lg p-2"
               >
                 Conexão
+              </Link>
+              <Link
+                href="/sobre"
+                className="text-black block hover:bg-primary  hover:text-white rounded-lg p-2"
+              >
+                Sobre Nós
               </Link>
 
               <Link
                 href="/login"
-                className="text-black block hover:bg-black  hover:text-white rounded-lg p-2"
+                className="text-black block hover:bg-primary  hover:text-white rounded-lg p-2"
               >
                 Login
               </Link>

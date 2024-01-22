@@ -1,10 +1,9 @@
 import "../styles/globals.css";
 import Header from "@/components/header/Header";
-import { Epilogue } from "next/font/google";
-
+import { Rubik } from "next/font/google";
 import Footer from "@/components/footer/Footer";
 
-const epilogue = Epilogue({
+const rubik = Rubik({
   subsets: ["latin"],
   weight: ["500", "600", "700"],
 });
@@ -17,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
-      <body className={epilogue.className}>
+      <body className={rubik.className}>
         <Header />
         {children}
         <Footer/>
