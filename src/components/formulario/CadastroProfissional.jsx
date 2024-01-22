@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-
+import ButtonForm from "../button/ButtonForm";
 
 const CadastroProfissional = () => {
   const [formData, setFormData] = useState({
@@ -26,117 +26,90 @@ const CadastroProfissional = () => {
     console.log('Dados do formulário:', formData);
   };
 
-  const styles = {
-    body: {
-      fontFamily: 'Arial, sans-serif',
-      backgroundColor: '#f8f9fa',
-      margin: 0,
-      alignItems: 'center',
-      justifyContent: 'center',
-      height: '100vh',
-    },
-    container: {
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      marginTop: '2%',
-      padding: '3px',
-      borderRadius: '2px',
-      boxShadow: '10px solid #ffffff',
-      width: '100%', 
-    },
-    
-    h3: {
-      fontSize: '200%',
-      fontWeight: 'light',
-      textAlign: 'center',
-    },
-  
-    formGroup: {
-      marginBottom: '10px',
-    },
-    label: {
-      display: 'block',
-      fontWeight: 'lighter',
-      color: '#000000 ', 
-    },
-    input: {
-      width: '100%',
-      padding: '5px',
-      fontSize: '16px',
-      border: '1px solid #000000',
-      borderRadius: '4px',
-    },
-   
-    button: {
-      color: '#000000',
-      padding: '10px 15px',
-      fontSize: '15px',
-      border: '1px solid #000000',
-      borderRadius: '8px',
-      cursor: 'pointer', 
-      marginLeft:'auto',
-      marginTop: 'auto',
-    },
-  
-  };
-
   return (
-    
-    <div style={styles.body}>
-      <h3 style={styles.h3}>Cadastro do Profissional</h3>
-      <div style={styles.container} className="cadastro-form">
-        <form onSubmit={handleSubmit}>
-          <div style={styles.formGroup}>
-            <label style={styles.label}>
-              Nome:
-              <input type="text" name="nome" value={formData.nome} onChange={handleChange} 
-                placeholder="Insira seu nome" style={styles.input} />
-            </label>
-          </div>
-
-          <div style={styles.formGroup}>
-            <label style={styles.label}>
-              CPF:
-              <input type="text" name="cpf" value={formData.cpf} onChange={handleChange} 
-                placeholder="Insira seu CPF"style={styles.input} />
-            </label>
-          </div>
-
-          <div style={styles.formGroup}>
-            <label style={styles.label}>
-              Área de Atuação:
-              <input type="text" name="areaAtuacao" value={formData.areaAtuacao} onChange={handleChange} 
-              placeholder="Insira aqui sua área de atuação"style={styles.input} />
-            </label>
-          </div>
-
-          <div style={styles.formGroup}>
-            <label style={styles.label}>
-              CRP:
-              <input type="text" name="crp" value={formData.crp} onChange={handleChange} 
-              placeholder="Insira seu CRP" style={styles.input} />
-            </label>
-          </div>
-
-          <div style={styles.formGroup}>
-            <label style={styles.label}>
-              E-mail:
-              <input type="email" name="email" value={formData.email} onChange={handleChange} 
-              placeholder="Insira seu email"style={styles.input} />
-            </label>
-          </div>
-
-          <div style={styles.formGroup}>
-            <label style={styles.label}>
-              Senha:
-              <input type="password" name="senha" value={formData.senha} onChange={handleChange} 
-              placeholder="Insira uma senha" style={styles.input} />
-            </label>
-          </div>
-      
-          <button type="submit" style={styles.button}>Cadastrar</button>
-        </form>
+    <div className="min-h-screen flex items-center justify-center">
+      <div className="w-full max-w-md">
+        <h3 className="text-2xl font-bold mb-6 text-center">Cadastro Profissional</h3>
+        <div className="bg-white shadow-md rounded-md p-6">
+          <form onSubmit={handleSubmit} className="cadastro-form">
+            <div className="mb-4">
+              <label className="block text-gray-600">Nome <span className="text-red-500">*</span></label>
+              <input
+                type="text"
+                name="nome"
+                value={formData.nome}
+                onChange={handleChange}
+                placeholder="Insira seu nome"
+                className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
+              />
+            </div>
+            <div className="mb-4">
+              <label className="block text-gray-600">Cpf <span className="text-red-500">*</span></label>
+              <input
+                type="text"
+                name="cpf"
+                value={formData.cpf}
+                onChange={handleChange}
+                placeholder="Insira seu cpf"
+                className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
+              />
+            </div>
+            <div className="mb-4">
+              <label className="block text-gray-600">Área de atuação</label>
+              <input
+                type="text"
+                name="area de atuaçao"
+                value={formData.areaAtuacao}
+                onChange={handleChange}
+                placeholder="Insira sua área de atuação"
+                className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
+              />
+            </div>
+            <div className="mb-4">
+              <label className="block text-gray-600">Crp <span className="text-red-500">*</span></label>
+              <input
+                type="text"
+                name="crp"
+                value={formData.crp}
+                onChange={handleChange}
+                placeholder="Insira seu crp aqui"
+                className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
+              />
+            </div>
+            <div className="mb-4">
+              <label className="block text-gray-600">Email <span className="text-red-500">*</span></label>
+              <input
+                type="text"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="seuemail@exemplo.com"
+                className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
+              />
+            </div>
+            <div className="mb-4">
+              <label className="block text-gray-600">Senha <span className="text-red-500">*</span></label>
+              <input
+                type="password"
+                name="senha"
+                value={formData.senha}
+                onChange={handleChange}
+                placeholder="Insira sua senha"
+                className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
+                autoComplete="new-password"
+              />
+            </div>
+            <p className="text-xs text-gray-500 mt-2 text-right">
+              <span className="text-red-500">*</span> campos obrigatórios
+            </p>
+            <ButtonForm
+              type="submit"
+              className="mx-auto bg-black text-white w-32 h-10 rounded-lg p-2 mt-20 mb-4 
+              text-center hover:bg-gray-700 focus:outline-none">
+              Cadastrar
+            </ButtonForm>
+          </form>
+        </div>
       </div>
     </div>
   );

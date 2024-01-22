@@ -1,9 +1,11 @@
 import CadastroProfissional from '@/components/formulario/CadastroProfissional';
 
+
+
 const FormularioProfissional = () => {
   return (
     <div>
-      <CadastroProfissional />
+      <CadastroProfissional /> 
     </div>
     
   );
