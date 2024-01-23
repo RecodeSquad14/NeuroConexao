@@ -29,7 +29,10 @@ module.exports = {
       width: {
         400: "400px",
         300: "300px",
+        500: "500px",
+        600: "600px",
         195: "195px",
+        250: "250px",
       },
       colors: {
         primary: "#9274e3",
