@@ -17,7 +17,29 @@ module.exports = {
       },
       maxWidth: {
         grid: "77.5rem",
+        770: "48.125rem",
+        1237: "77.313rem",
+        360: "22.5rem",
       },
+      minWidth: {
+        770: "48.125rem",
+        1237: "77.313rem",
+        360: "22.5rem",
+      },
+      width: {
+        400: "400px",
+        300: "300px",
+        500: "500px",
+        600: "600px",
+        195: "195px",
+        250: "250px",
+      },
+      colors: {
+        primary: "#9274e3",
+        secondary: "#c481fd",
+        tertiary: "#8c8cfb",
+      },
+
       backgroundColor: {
         primary: "#9274e3",
         secondary: "#c481fd",
