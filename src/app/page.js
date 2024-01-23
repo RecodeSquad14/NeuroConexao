@@ -3,6 +3,7 @@ import CardInfo from "@/components/cardInfo/CardInfo";
 import GridContainer from "@/components/grid/GridContainer";
 import Image from "next/image";
 
+
 export default function Home() {
   return (
     <div className="bg-primary">
