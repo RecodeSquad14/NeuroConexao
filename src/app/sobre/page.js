@@ -63,71 +63,90 @@ const Sobre = () => {
 
         <div className="flex flex-wrap  justify-center items-center gap-2">
           <div>
-            <a href="https://www.google.com" target="_blank">
+            <a href="https://www.linkedin.com/in/alfanya-a-277773bb/" target="_blank">
               <Image
-                src="/squad-img/alfa.jpeg"
+                src="/squad-img/alfa.png"
                 alt="Imagem 1"
                 width={300}
                 height={300}
-                className="rounded-3xl w-195 md:w-auto"
+                className="rounded-3xl w-195 md:w-300"
               />
             </a>
-            <p className="text-white text-center">CEO- Anderson Rocha</p>
+            <p className="text-white text-center">Alfannya Abrantes</p>
           </div>
-          <div className="">
-            <Image
-              src="/squad-img/alfa.jpeg"
-              alt="Imagem 1"
-              width={300}
-              height={300}
-              className="rounded-3xl w-195 md:w-300"
-            />
+          <div>
+            <a href="https://www.linkedin.com/in/anaclaracamorim/" target="_blank">
+              <Image
+                src="/squad-img/ana.png"
+                alt="Imagem 1"
+                width={300}
+                height={300}
+                className="rounded-3xl w-195 md:w-300"
+              />
+            </a>
+            <p className="text-white text-center">Ana Clara Amorim</p>
           </div>
-          <div className="">
-            <Image
-              src="/squad-img/alfa.jpeg"
-              alt="Imagem 1"
-              width={300}
-              height={300}
-              className="rounded-3xl w-195 md:w-auto"
-            />
+          <div>
+            <a href="https://www.linkedin.com/in/anderson-rocha-silva/" target="_blank">
+              <Image
+                src="/squad-img/anderson.png"
+                alt="Imagem 1"
+                width={300}
+                height={300}
+                className="rounded-3xl w-195 md:w-300"
+              />
+            </a>
+            <p className="text-white text-center">Anderson Rocha</p>
           </div>
-          <div className="">
-            <Image
-              src="/squad-img/alfa.jpeg"
-              alt="Imagem 1"
-              width={300}
-              height={300}
-              className="rounded-3xl w-195 md:w-auto"
-            />
+          <div>
+            <a href="https://www.linkedin.com/in/marcelle-s-170995163/" target="_blank">
+              <Image
+                src="/squad-img/marcelle.png"
+                alt="Imagem 1"
+                width={300}
+                height={300}
+                className="rounded-3xl w-195 md:w-300"
+              />
+            </a>
+            <p className="text-white text-center">Marcelle Santos</p>
           </div>
-          <div className="">
-            <Image
-              src="/squad-img/alfa.jpeg"
-              alt="Imagem 1"
-              width={300}
-              height={300}
-              className="rounded-3xl w-195 md:w-auto"
-            />
+          <div>
+            <a href="https://www.linkedin.com/in/marconi-sena/" target="_blank">
+              <Image
+                src="/squad-img/marconi.png"
+                alt="Imagem 1"
+                width={300}
+                height={300}
+                className="rounded-3xl w-195 md:w-300"
+              />
+            </a>
+            <p className="text-white text-center">Marconi Sena</p>
           </div>
-          <div className="">
-            <Image
-              src="/squad-img/alfa.jpeg"
-              alt="Imagem 1"
-              width={300}
-              height={300}
-              className="rounded-3xl w-195 md:w-auto"
-            />
+          <div>
+            <a href="https://www.linkedin.com/in/marcos-custodio/" target="_blank">
+              <Image
+                src="/squad-img/marcos.png"
+                alt="Imagem 1"
+                width={200}
+                height={200}
+                className="rounded-3xl w-195 md:w-300"
+              />
+            </a>
+            <p className="text-white text-center">Marcos Custódio</p>
           </div>
-          <div className="">
-            <Image
-              src="/squad-img/alfa.jpeg"
-              alt="Imagem 1"
-              width={300}
-              height={300}
-              className="rounded-3xl w-195 md:w-auto"
-            />
+          <div>
+            <a href="#" target="_blank">
+              <Image
+                src="/squad-img/matheus.png"
+                alt="Imagem 1"
+                width={300}
+                height={300}
+                className="rounded-3xl w-195 md:w-300"
+              />
+            </a>
+            <p className="text-white text-center">Matheus Albieri</p>
           </div>
+
         </div>
       </GridContainer>
     </div>
