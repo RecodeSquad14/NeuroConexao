@@ -1,11 +1,12 @@
 import GridContainer from "@/components/grid/GridContainer";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Sobre = () => {
   return (
     <div className="bg-primary">
-      <GridContainer className="flex flex-col items-center h-screen">
+      <GridContainer className="flex flex-col items-center h-auto">
         <Image
           src="/home-img/equipeneura.png"
           alt="imagem de equipe"
@@ -25,7 +26,7 @@ const Sobre = () => {
       </GridContainer>
 
       <div className="bg-secondary">
-        <GridContainer className="flex flex-col gap-7 justify-center items-center h-screen md:flex-row ">
+        <GridContainer className="flex flex-col gap-7 justify-center items-center h-auto md:flex-row ">
           <div className="md:w-1/2 ">
             <Image
               src="/home-img/equipe.png"
@@ -49,89 +50,84 @@ const Sobre = () => {
         </GridContainer>
       </div>
 
-      <GridContainer className="flex flex-col gap-7 h-screen md:flex-row">
+      <GridContainer className="flex-col flex-wrap items-center h-auto md:flex-row p-2">
         <div className="md:w-1/2 flex items-start justify-center mx-auto">
           <Image
             src="/home-img/team.png"
             alt="grupo de pessoas"
             width={600}
             height={600}
-            className=" w-195 md:w-auto "
-          />
-        </div>
-      </GridContainer>
-
-      <GridContainer className="grid grid-cols-4 gap-4">
-        <div className="rounded-full overflow-hidden mb-2">
-          <Image
-            src="/squad-img/alfa.jpeg"
-            alt="Imagem 1"
-            width={50}
-            height={50}
-            className="w-full h-full object-cover"
+            className=" w-300 md:w-auto "
           />
         </div>
 
-        <div className="rounded-full overflow-hidden mb-2">
-          <Image
-            src="/squad-img/alfa.jpeg"
-            alt="Imagem 1"
-            width={50}
-            height={50}
-            className="w-full h-full object-cover"
-          />
-        </div>
-
-        <div className="rounded-full overflow-hidden mb-2">
-          <Image
-            src="/squad-img/alfa.jpeg"
-            alt="Imagem 1"
-            width={50}
-            height={50}
-            className="w-full h-full object-cover"
-          />
-        </div>
-
-        <div className="rounded-full overflow-hidden mb-2">
-          <Image
-            src="/squad-img/alfa.jpeg"
-            alt="Imagem 1"
-            width={50}
-            height={50}
-            className="w-full h-full object-cover"
-          />
-        </div>
-      </GridContainer>
-
-      <GridContainer className="grid grid-cols-3 gap-4">
-        <div className="rounded-full overflow-hidden mb-2">
-          <Image
-            src="/squad-img/alfa.jpeg"
-            alt="Imagem 1"
-            width={50}
-            height={50}
-            className="w-full h-full object-cover"
-          />
-        </div>
-
-        <div className="rounded-full overflow-hidden mb-2">
-          <Image
-            src="/squad-img/alfa.jpeg"
-            alt="Imagem 1"
-            width={50}
-            height={50}
-            className="w-full h-full object-cover"
-          />
-        </div>
-
-        <div className="rounded-full overflow-hidden mb-2">
-          <Image
-            src="/squad-img/alfa.jpeg"
-            alt="Imagem 1"
-            width={50}
-            height={50}
-            className="w-full h-full object-cover"
-          />
+        <div className="flex flex-wrap  justify-center items-center gap-2">
+          <div>
+            <a href="https://www.google.com" target="_blank">
+              <Image
+                src="/squad-img/alfa.jpeg"
+                alt="Imagem 1"
+                width={300}
+                height={300}
+                className="rounded-3xl w-195 md:w-auto"
+              />
+            </a>
+            <p className="text-white text-center">CEO- Anderson Rocha</p>
+          </div>
+          <div className="">
+            <Image
+              src="/squad-img/alfa.jpeg"
+              alt="Imagem 1"
+              width={300}
+              height={300}
+              className="rounded-3xl w-195 md:w-300"
+            />
+          </div>
+          <div className="">
+            <Image
+              src="/squad-img/alfa.jpeg"
+              alt="Imagem 1"
+              width={300}
+              height={300}
+              className="rounded-3xl w-195 md:w-auto"
+            />
+          </div>
+          <div className="">
+            <Image
+              src="/squad-img/alfa.jpeg"
+              alt="Imagem 1"
+              width={300}
+              height={300}
+              className="rounded-3xl w-195 md:w-auto"
+            />
+          </div>
+          <div className="">
+            <Image
+              src="/squad-img/alfa.jpeg"
+              alt="Imagem 1"
+              width={300}
+              height={300}
+              className="rounded-3xl w-195 md:w-auto"
+            />
+          </div>
+          <div className="">
+            <Image
+              src="/squad-img/alfa.jpeg"
+              alt="Imagem 1"
+              width={300}
+              height={300}
+              className="rounded-3xl w-195 md:w-auto"
+            />
+          </div>
+          <div className="">
+            <Image
+              src="/squad-img/alfa.jpeg"
+              alt="Imagem 1"
+              width={300}
+              height={300}
+              className="rounded-3xl w-195 md:w-auto"
+            />
+          </div>
         </div>
       </GridContainer>
     </div>
