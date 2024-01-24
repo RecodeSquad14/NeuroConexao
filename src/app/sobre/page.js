@@ -42,8 +42,7 @@ const Sobre = () => {
           A NeuroConexão tem como missão principal resolver o desafio da
           empregabilidade para pessoas neurodiversas, criando um ambiente
           inclusivo tanto para empresas quanto para profissionais. Acreditamos
-          que a diversidade é a força propulsora de um futuro mais promissor, e,
-          com a ajuda de profissionais da saúde, estamos caminhando para um
+          na diversidade, e, com a ajuda de profissionais da saúde, estamos caminhando para um
           mercado de trabalho mais inclusivo.
         </p>
       </div>
