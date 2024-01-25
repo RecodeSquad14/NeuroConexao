@@ -53,7 +53,6 @@ export default function Home() {
           </p>
         </div>
       </GridContainer>
-      
     </div>
     
   );
