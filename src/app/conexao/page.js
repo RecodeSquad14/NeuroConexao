@@ -8,32 +8,6 @@ function Page() {
     <div className="bg-primary min-h-screen flex flex-col items-center justify-center">
       <div className="text-center">
         {
-          <div className="flex justify-between">
-            <Image
-              src="/conexao-img/profissionalSaude.png"
-              alt="grupo de pessoas"
-              width={300}
-              height={300}
-              className="mx-auto max-w-full h-auto p-1 mb-4"
-            />
-            <Image
-              src="/conexao-img/profissionalNeuroatipico.png"
-              alt="grupo de pessoas"
-              width={300}
-              height={300}
-              className="mx-auto max-w-full h-auto p-1 mb-4"
-            />
-            <Image
-              src="/conexao-img/empresa.png"
-              alt="grupo de pessoas"
-              width={300}
-              height={300}
-              className="mx-auto max-w-full h-auto p-1 mb-4"
-            />
-          </div>
-        }
-
-        {
           <div className="flex flex-wrap items-center justify-between">
             <Image
               src="/conexao-img/profissionalSaude.png"
