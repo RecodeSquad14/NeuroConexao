@@ -46,7 +46,7 @@ function Login() {
       </form>
       <div class="text-sm text-center mt-[1.6rem]">
         Não criou sua conta?{" "}
-        <Link className="text-sm text-secondary" href="#">
+        <Link className="text-sm text-secondary" href="/formularioNeurodiverso">
           Crie de graça!
         </Link>
       </div>
