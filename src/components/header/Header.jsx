@@ -21,7 +21,12 @@ function Header() {
                   href="/"
                   className="text-black flex items-center justify-center gap-3"
                 >
-                  <Image src="/logo.png" alt="logo" width={50} height={55} />
+                  <Image
+                    src="/logopurple.png"
+                    alt="logo"
+                    width={50}
+                    height={55}
+                  />
                   <p className="font-semibold">NeuroConexão</p>
                 </Link>
               </div>
@@ -79,7 +84,6 @@ function Header() {
                 ) : (
                   <Image src="/close.svg" alt="menu" width={25} height={25} />
                 )}
-                
               </button>
             </div>
           </div>
@@ -112,7 +116,6 @@ function Header() {
               >
                 Login
               </Link>
-              
             </div>
           </div>
         )}

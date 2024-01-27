@@ -3,7 +3,6 @@ import CardInfo from "@/components/cardInfo/CardInfo";
 import GridContainer from "@/components/grid/GridContainer";
 import Image from "next/image";
 
-
 export default function Home() {
   return (
     <div className="bg-primary">
@@ -47,13 +46,12 @@ export default function Home() {
         </div>
 
         <div className="md:w-1/2">
-          <p className="font-normal text-3xl leading-normal text-slate-100  md:text-5xl md:leading-normal">
+          <p className="font-normal text-2xl leading-normal text-slate-100  md:text-5xl md:leading-normal">
             Nossa missão é criar oportunidades e conexões significativas,
             promovendo um ambiente de trabalho inclusivo.
           </p>
         </div>
       </GridContainer>
     </div>
-    
   );
 }

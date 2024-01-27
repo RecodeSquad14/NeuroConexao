@@ -34,10 +34,15 @@ module.exports = {
         195: "195px",
         250: "250px",
       },
+      height: {
+        740: "740px",
+      },
       colors: {
         primary: "#9274e3",
         secondary: "#c481fd",
         tertiary: "#8c8cfb",
+        black24: "#242424",
+        footertext: "#AF5DCD",
       },
 
       backgroundColor: {

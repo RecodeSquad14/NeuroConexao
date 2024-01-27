@@ -6,7 +6,7 @@ import React from "react";
 const Sobre = () => {
   return (
     <div className="bg-primary">
-      <GridContainer className="flex flex-col items-center h-auto">
+      <GridContainer className="flex flex-col items-center h-auto p-4">
         <Image
           src="/home-img/equipeneura.png"
           alt="imagem de equipe"
@@ -26,7 +26,7 @@ const Sobre = () => {
       </GridContainer>
 
       <div className="bg-secondary">
-        <GridContainer className="flex flex-col gap-7 justify-center items-center h-auto md:flex-row ">
+        <GridContainer className="flex flex-col gap-7 justify-center items-center h-auto md:flex-row p-4 ">
           <div className="md:w-1/2 ">
             <Image
               src="/home-img/equipe.png"
@@ -63,7 +63,10 @@ const Sobre = () => {
 
         <div className="flex flex-wrap  justify-center items-center gap-2">
           <div>
-            <a href="https://www.linkedin.com/in/alfanya-a-277773bb/" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/alfanya-a-277773bb/"
+              target="_blank"
+            >
               <Image
                 src="/squad-img/alfa.png"
                 alt="Imagem 1"
@@ -75,7 +78,10 @@ const Sobre = () => {
             <p className="text-white text-center">Alfannya Abrantes</p>
           </div>
           <div>
-            <a href="https://www.linkedin.com/in/anaclaracamorim/" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/anaclaracamorim/"
+              target="_blank"
+            >
               <Image
                 src="/squad-img/ana.png"
                 alt="Imagem 1"
@@ -87,7 +93,10 @@ const Sobre = () => {
             <p className="text-white text-center">Ana Clara Amorim</p>
           </div>
           <div>
-            <a href="https://www.linkedin.com/in/anderson-rocha-silva/" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/anderson-rocha-silva/"
+              target="_blank"
+            >
               <Image
                 src="/squad-img/anderson.png"
                 alt="Imagem 1"
@@ -99,7 +108,10 @@ const Sobre = () => {
             <p className="text-white text-center">Anderson Rocha</p>
           </div>
           <div>
-            <a href="https://www.linkedin.com/in/marcelle-s-170995163/" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/marcelle-s-170995163/"
+              target="_blank"
+            >
               <Image
                 src="/squad-img/marcelle.png"
                 alt="Imagem 1"
@@ -123,7 +135,10 @@ const Sobre = () => {
             <p className="text-white text-center">Marconi Sena</p>
           </div>
           <div>
-            <a href="https://www.linkedin.com/in/marcos-custodio/" target="_blank">
+            <a
+              href="https://www.linkedin.com/in/marcos-custodio/"
+              target="_blank"
+            >
               <Image
                 src="/squad-img/marcos.png"
                 alt="Imagem 1"
@@ -146,7 +161,6 @@ const Sobre = () => {
             </a>
             <p className="text-white text-center">Matheus Albieri</p>
           </div>
-
         </div>
       </GridContainer>
     </div>
