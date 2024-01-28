@@ -1,8 +1,10 @@
 "use client";
 import React, { useState } from "react";
 import { object, string } from "zod";
-import ButtonForm from "../button/ButtonForm";
+
 import { IMaskInput } from "react-imask";
+import Button from "../button/Button";
+import ButtonForm from "../button/ButtonForm";
 
 const telRegex = RegExp(
   "^\\([1-9]{2}\\) (?:[2-8]|9[0-9])[0-9]{3}\\-[0-9]{4}$",
@@ -111,17 +113,27 @@ function CadastroNeurodiverso() {
     setFormValid(formErrors.length === 0);
   };
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    // add API
+  const handleSubmit = async event => {
+    event.preventDefault();
 
-    if (formValid) {
-      // Lógica para enviar o formulário
-      console.log("Formulário enviado!");
+    try {
+      const response = await fetch("http://localhost:8080/neurodiverso/save", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        window.location.replace("/");
+      } else {
+        console.error("Erro ao cadastrar o pacote:", response.statusText);
+      }
+    } catch (error) {
+      console.error("Erro ao cadastrar o pacote:", error);
     }
-    console.log("Dados do formulário:", formData);
   };
-
   return (
     <div className="wrapper bg-primary">
       <div className="min-h-screen flex items-center justify-center">
@@ -293,11 +305,10 @@ function CadastroNeurodiverso() {
               </p>
               <ButtonForm
                 type="submit"
+                name="Cadastrar"
                 className="mx-auto bg-black text-white w-32 h-10 rounded-lg p-2 mt-20 mb-4 
-                text-center hover:bg-gray-700 focus:outline-none"
-              >
-                Cadastrar
-              </ButtonForm>
+              text-center hover:bg-gray-700 focus:outline-none"
+              />
             </form>
           </div>
         </div>
@@ -305,5 +316,4 @@ function CadastroNeurodiverso() {
     </div>
   );
 }
-
 export default CadastroNeurodiverso;

@@ -1,16 +1,11 @@
 import React from "react";
 
-function ButtonForm({ onClick, className, children }) {
-    const customClassName = ` ${className}`;
-
-    return (
-        <div className={customClassName} onClick={onClick}>
-            {children}
-        </div>
-    );
+function ButtonForm({ name, className, type }) {
+  return (
+    <button className={className} type={type}>
+      {name}
+    </button>
+  );
 }
 
 export default ButtonForm;
-
-
-
