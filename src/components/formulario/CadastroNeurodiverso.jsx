@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { object, string } from "zod";
 import ButtonForm from "../button/ButtonForm";
 import { IMaskInput } from "react-imask";
+import axios from 'axios';
 
 const telRegex = RegExp(
   "^\\([1-9]{2}\\) (?:[2-8]|9[0-9])[0-9]{3}\\-[0-9]{4}$",
@@ -111,13 +112,19 @@ function CadastroNeurodiverso() {
     setFormValid(formErrors.length === 0);
   };
 
-  const handleSubmit = e => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // add API
 
     if (formValid) {
-      // Lógica para enviar o formulário
-      console.log("Formulário enviado!");
+      e.preventDefault();
+        try {
+          await axios.post('http://localhost:8080/neurodiverso/save', formData);
+          alert('Formulário enviado com sucesso!');
+      } catch (error) {
+          console.error('Erro ao enviar o formulário:', error);
+          alert('Erro ao enviar o formulário. Por favor, tente novamente.');
+      }
     }
     console.log("Dados do formulário:", formData);
   };
