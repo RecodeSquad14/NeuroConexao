@@ -11,7 +11,7 @@ const CadastroEmpresa = () => {
     senha: "",
   });
 
-  const handleChange = (e) => {
+  const handleChange = e => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -19,7 +19,7 @@ const CadastroEmpresa = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
     // add API
     console.log("Dados do formulário:", formData);
@@ -94,6 +94,7 @@ const CadastroEmpresa = () => {
                 <span className="text-red-500">*</span> campos obrigatórios
               </p>
               <ButtonForm
+                name="Cadastrar"
                 type="submit"
                 className="mx-auto bg-black text-white w-32 h-10 rounded-lg cursor-pointer p-2 mt-20 mb-4
               text-center hover:bg-gray-700 focus:outline-none"

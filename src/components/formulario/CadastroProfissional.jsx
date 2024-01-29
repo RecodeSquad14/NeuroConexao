@@ -5,15 +5,15 @@ import ButtonForm from "../button/ButtonForm";
 
 const CadastroProfissional = () => {
   const [formData, setFormData] = useState({
-    nome: '',
-    cpf: '',
-    areaAtuacao: '',
-    crp: '',
-    email: '',
-    senha: '',
+    nome: "",
+    cpf: "",
+    areaAtuacao: "",
+    crp: "",
+    email: "",
+    senha: "",
   });
 
-  const handleChange = (e) => {
+  const handleChange = e => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -21,22 +21,28 @@ const CadastroProfissional = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
     // add API
-    console.log('Dados do formulário:', formData);
+    console.log("Dados do formulário:", formData);
   };
 
   return (
-    
     <div className="wrapper bg-primary">
       <div className="min-h-screen flex items-center justify-center">
         <div className="w-full max-w-md">
-        <h3 style={{ marginTop: '20px' }} className="text-2xl font-bold mb-6 text-center">Cadastro Profissional</h3>
+          <h3
+            style={{ marginTop: "20px" }}
+            className="text-2xl font-bold mb-6 text-center"
+          >
+            Cadastro Profissional
+          </h3>
           <div className="bg-white shadow-md rounded-md p-6">
             <form onSubmit={handleSubmit} className="cadastro-form">
               <div className="mb-4">
-                <label className="block text-gray-600">Nome <span className="text-red-500">*</span></label>
+                <label className="block text-gray-600">
+                  Nome <span className="text-red-500">*</span>
+                </label>
                 <input
                   type="text"
                   name="nome"
@@ -47,7 +53,9 @@ const CadastroProfissional = () => {
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-gray-600">Cpf <span className="text-red-500">*</span></label>
+                <label className="block text-gray-600">
+                  Cpf <span className="text-red-500">*</span>
+                </label>
                 <input
                   type="text"
                   name="cpf"
@@ -69,7 +77,9 @@ const CadastroProfissional = () => {
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-gray-600">Crp <span className="text-red-500">*</span></label>
+                <label className="block text-gray-600">
+                  Crp <span className="text-red-500">*</span>
+                </label>
                 <input
                   type="text"
                   name="crp"
@@ -80,7 +90,9 @@ const CadastroProfissional = () => {
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-gray-600">Email <span className="text-red-500">*</span></label>
+                <label className="block text-gray-600">
+                  Email <span className="text-red-500">*</span>
+                </label>
                 <input
                   type="text"
                   name="email"
@@ -91,7 +103,9 @@ const CadastroProfissional = () => {
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-gray-600">Senha <span className="text-red-500">*</span></label>
+                <label className="block text-gray-600">
+                  Senha <span className="text-red-500">*</span>
+                </label>
                 <input
                   type="password"
                   name="senha"
@@ -101,7 +115,9 @@ const CadastroProfissional = () => {
                   className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
                   autoComplete="new-password"
                 />
-                <label className="block mt-2 text-gray-600">Confirmar senha <span className="text-red-500">*</span></label>
+                <label className="block mt-2 text-gray-600">
+                  Confirmar senha <span className="text-red-500">*</span>
+                </label>
                 <input
                   type="password"
                   name="confirmarSenha"
@@ -117,10 +133,10 @@ const CadastroProfissional = () => {
               </p>
               <ButtonForm
                 type="submit"
+                name="Cadastrar"
                 className="mx-auto bg-black text-white w-32 h-10 rounded-lg cursor-pointer p-2 mt-20 mb-4 
-              text-center hover:bg-gray-700 focus:outline-none">
-                Cadastrar
-              </ButtonForm>
+              text-center hover:bg-gray-700 focus:outline-none"
+              ></ButtonForm>
             </form>
           </div>
         </div>
@@ -130,4 +146,3 @@ const CadastroProfissional = () => {
 };
 
 export default CadastroProfissional;
-
