@@ -1,6 +1,4 @@
-import ButtonForm from "@/components/button/ButtonForm";
-import Card from "@/components/card/Card";
-import GridContainer from "@/components/grid/GridContainer";
+import Card from "@/components/card/card";
 import Link from "next/link";
 import React from "react";
 
