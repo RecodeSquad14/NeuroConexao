@@ -11,18 +11,55 @@ const CadastroEmpresa = () => {
     senha: "",
   });
 
-  const handleChange = e => {
+  const [errors, setErrors] = useState({}); 
+
+  const [formValid, setFormValid] = useState(false);
+
+  const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
+
+    setFormData((prevData) => ({
+      ...prevData,
       [name]: value,
-    });
+    }));
+
+    try {
+     
+      empresaFormSchema.pick({ [name]: empresaFormSchema.shape[name] }).parse({ [name]: value });
+
+      setErrors((prevErrors) => ({ ...prevErrors, [name]: "" }));
+    } catch (error) {
+      const errorMessage = error.errors?.[0]?.message || "";
+      setErrors((prevErrors) => ({ ...prevErrors, [name]: errorMessage }));
+    }
+
+    validateForm();
+  };
+  const validateForm = () => {
+    const formErrors = Object.values(errors).filter(error => error !== "");
+    setFormValid(formErrors.length === 0);
   };
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    // add API
-    console.log("Dados do formulário:", formData);
+  const handleSubmit = async event => {
+    event.preventDefault();
+
+    try {
+      const response = await fetch("http://localhost:8080/empresas/save", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        window.location.replace("/");
+      } else {
+        console.error("Erro ao cadastrar o pacote:", response.statusText);
+      }
+    } catch (error) {
+      console.error("Erro ao cadastrar o pacote:", error);
+    }
   };
 
   return (
@@ -94,13 +131,11 @@ const CadastroEmpresa = () => {
                 <span className="text-red-500">*</span> campos obrigatórios
               </p>
               <ButtonForm
-                name="Cadastrar"
                 type="submit"
-                className="mx-auto bg-black text-white w-32 h-10 rounded-lg cursor-pointer p-2 mt-20 mb-4
+                name="Cadastrar"
+                className="mx-auto bg-black text-white w-32 h-10 rounded-lg p-2 mt-20 mb-4 
               text-center hover:bg-gray-700 focus:outline-none"
-              >
-                Cadastrar
-              </ButtonForm>
+              />
             </form>
           </div>
         </div>

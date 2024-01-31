@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-
 import ButtonForm from "../button/ButtonForm";
 
 const CadastroProfissional = () => {
@@ -13,18 +12,55 @@ const CadastroProfissional = () => {
     senha: "",
   });
 
-  const handleChange = e => {
+  const [errors, setErrors] = useState({}); 
+
+  const [formValid, setFormValid] = useState(false);
+
+  const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
+
+    setFormData((prevData) => ({
+      ...prevData,
       [name]: value,
-    });
+    }));
+
+    try {
+     
+      profissionalFormSchema.pick({ [name]: profissionalFormSchema.shape[name] }).parse({ [name]: value });
+
+      setErrors((prevErrors) => ({ ...prevErrors, [name]: "" }));
+    } catch (error) {
+      const errorMessage = error.errors?.[0]?.message || "";
+      setErrors((prevErrors) => ({ ...prevErrors, [name]: errorMessage }));
+    }
+
+    validateForm();
+  };
+  const validateForm = () => {
+    const formErrors = Object.values(errors).filter(error => error !== "");
+    setFormValid(formErrors.length === 0);
   };
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    // add API
-    console.log("Dados do formulário:", formData);
+  const handleSubmit = async event => {
+    event.preventDefault();
+
+    try {
+      const response = await fetch("http://localhost:8080/profissionais/save", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        window.location.replace("/");
+      } else {
+        console.error("Erro ao cadastrar o pacote:", response.statusText);
+      }
+    } catch (error) {
+      console.error("Erro ao cadastrar o pacote:", error);
+    }
   };
 
   return (
@@ -38,7 +74,7 @@ const CadastroProfissional = () => {
             Cadastro Profissional
           </h3>
           <div className="bg-white shadow-md rounded-md p-6">
-            <form onSubmit={handleSubmit} className="cadastro-form">
+            <form onSubmit={handleSubmit}className="cadastro-form">
               <div className="mb-4">
                 <label className="block text-gray-600">
                   Nome <span className="text-red-500">*</span>
@@ -69,7 +105,7 @@ const CadastroProfissional = () => {
                 <label className="block text-gray-600">Área de atuação</label>
                 <input
                   type="text"
-                  name="area de atuaçao"
+                  name="areaAtuaçao"
                   value={formData.areaAtuacao}
                   onChange={handleChange}
                   placeholder="Insira sua área de atuação"
@@ -134,9 +170,9 @@ const CadastroProfissional = () => {
               <ButtonForm
                 type="submit"
                 name="Cadastrar"
-                className="mx-auto bg-black text-white w-32 h-10 rounded-lg cursor-pointer p-2 mt-20 mb-4 
+                className="mx-auto bg-black text-white w-32 h-10 rounded-lg p-2 mt-20 mb-4 
               text-center hover:bg-gray-700 focus:outline-none"
-              ></ButtonForm>
+              />
             </form>
           </div>
         </div>
