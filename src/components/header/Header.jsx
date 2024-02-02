@@ -35,15 +35,21 @@ function Header() {
               <div className="ml-4 flex items-center space-x-4">
                 <Link
                   href="/"
-                  className="text-black hover:bg-primary hover:text-white  rounded-lg p-2"
+                  className="text-black hover:bg-primary  hover:text-white  rounded-lg p-2"
                 >
                   Inicio
                 </Link>
                 <Link
                   href="/conexao"
-                  className="text-black hover:bg-primary hover:text-white  rounded-lg p-2"
+                  className="text-black hover:bg-primary  hover:text-white  rounded-lg p-2"
                 >
                   Conexão
+                </Link>
+                <Link
+                  href="/vagas"
+                  className="text-black hover:bg-primary  hover:text-white  rounded-lg p-2"
+                >
+                  Vagas
                 </Link>
                 <Link
                   href="/sobre"
@@ -102,6 +108,12 @@ function Header() {
                 className="text-black block hover:bg-primary  hover:text-white rounded-lg p-2"
               >
                 Conexão
+              </Link>
+              <Link
+                href="/vagas"
+                className="text-black block hover:bg-primary  hover:text-white rounded-lg p-2"
+              >
+                Vagas
               </Link>
               <Link
                 href="/sobre"
