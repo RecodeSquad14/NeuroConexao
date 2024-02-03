@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Projeto Recode Pro 2023 - Site Neuro Conexão - Squad 14
+### 🚀 Sobre o projeto
 
-First, run the development server:
+O site Neuro Conexão tem como objetivo ajudar pessoas neurodivergentes a se conectar com empresas, além de auxiliar através de treinamentos, tanto pessoas neurodivergentes, empresas, pessoas de suporte e familiares durante o processo de empregabilidade.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<h1><a href="https://neuro-conexao.vercel.app" target="_blank"> Link para nosso site</a></h1>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Documentação de cores
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+As cores principais utilizadas no projeto foram escolhidas de modo a passar uma agradabilidade para qualquer tipo de pessoa, tendo um contraste e equilíbrio entre si, além de tons violetas remeterem a diversidade, inovação e tecnologia. 
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+| Cor               | Hexadecimal                                                |
+| ----------------- | ---------------------------------------------------------------- |
+| Cor primária       | ![#9274e3](https://via.placeholder.com/10/9274e3?text=+) #9274e3 |
+| Cor secundária       | ![#c481fd](https://via.placeholder.com/10/c481fd?text=+) #c481fd |
+| Cor terciária       | ![#8c8cfb](https://via.placeholder.com/10/8c8cfb?text=+) #8c8cfb |
 
-## Learn More
+## Membro do projeto
+### Alunos: 
+- Alfannya Tannyane Santos Abrantes [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/alfanya-a-277773bb/)
 
-To learn more about Next.js, take a look at the following resources:
+- Aline Conceição Monteiro [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aline-monteiro-0a7212128/)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Aline Freire da Silva Santos [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/aline-freire-504b42180/)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- Ana Clara Correia Amorim dos Santos (Líder) [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anaclaracamorim/)
 
-## Deploy on Vercel
+- Anderson Borba Silva [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anderson-borba-silva-54592481/)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Anderson Soares da Rocha Silva (Vice-Líder) [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/anderson-rocha-silva/)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Stacks utilizadas
+
+**Front-end:** Next js, Tailwind CSS
+
+**Back-end:** Java, Spring Boot, MySQL
+
