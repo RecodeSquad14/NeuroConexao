@@ -11,7 +11,7 @@ const CadastroEmpresa = () => {
     senha: "",
   });
 
-  const [errors, setErrors] = useState({}); 
+  const [errors, setErrors] = useState({});
 
   const [formValid, setFormValid] = useState(false);
 
@@ -24,7 +24,7 @@ const CadastroEmpresa = () => {
     }));
 
     try {
-     
+
       empresaFormSchema.pick({ [name]: empresaFormSchema.shape[name] }).parse({ [name]: value });
 
       setErrors((prevErrors) => ({ ...prevErrors, [name]: "" }));
@@ -106,8 +106,8 @@ const CadastroEmpresa = () => {
                 </label>
                 <input
                   type="text"
-                  name="emailCorporativo"
-                  value={formData.email}
+                  name="email_corporativo"
+                  value={formData.email_corporativo}
                   onChange={handleChange}
                   placeholder="email@exemplo.com"
                   className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
