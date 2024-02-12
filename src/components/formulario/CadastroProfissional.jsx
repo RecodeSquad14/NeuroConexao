@@ -12,7 +12,7 @@ const CadastroProfissional = () => {
     senha: "",
   });
 
-  const [errors, setErrors] = useState({}); 
+  const [errors, setErrors] = useState({});
 
   const [formValid, setFormValid] = useState(false);
 
@@ -25,7 +25,7 @@ const CadastroProfissional = () => {
     }));
 
     try {
-     
+
       profissionalFormSchema.pick({ [name]: profissionalFormSchema.shape[name] }).parse({ [name]: value });
 
       setErrors((prevErrors) => ({ ...prevErrors, [name]: "" }));
@@ -74,7 +74,7 @@ const CadastroProfissional = () => {
             Cadastro Profissional
           </h3>
           <div className="bg-white shadow-md rounded-md p-6">
-            <form onSubmit={handleSubmit}className="cadastro-form">
+            <form onSubmit={handleSubmit} className="cadastro-form">
               <div className="mb-4">
                 <label className="block text-gray-600">
                   Nome <span className="text-red-500">*</span>
@@ -102,13 +102,15 @@ const CadastroProfissional = () => {
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-gray-600">Área de atuação</label>
+                <label className="block mt-2 text-gray-600">
+                  Área de atuação
+                </label>
                 <input
                   type="text"
-                  name="areaAtuaçao"
+                  name="areaAtuacao"
                   value={formData.areaAtuacao}
                   onChange={handleChange}
-                  placeholder="Insira sua área de atuação"
+                  placeholder="área de atuação"
                   className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
                 />
               </div>
